@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DA42AD42873192600F54CEE /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA42AD32873192600F54CEE /* PopupViewController.swift */; };
 		2DC4DC0528727393006E18FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4DC0428727393006E18FD /* AppDelegate.swift */; };
 		2DC4DC0728727393006E18FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4DC0628727393006E18FD /* SceneDelegate.swift */; };
 		2DC4DC0928727393006E18FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4DC0828727393006E18FD /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DA42AD32873192600F54CEE /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		2DC4DC0128727393006E18FD /* 03ViewStruct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03ViewStruct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC4DC0428727393006E18FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DC4DC0628727393006E18FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2DC4DC0628727393006E18FD /* SceneDelegate.swift */,
 				2DC4DC0828727393006E18FD /* ViewController.swift */,
 				2DC4DC0A28727393006E18FD /* Main.storyboard */,
+				2DA42AD32873192600F54CEE /* PopupViewController.swift */,
 				2DC4DC1828727FD2006E18FD /* SecondeViewController.swift */,
 				2DC4DC1A28727FF7006E18FD /* ThirdViewController.swift */,
 				2DC4DC0D28727397006E18FD /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				2DC4DC1B28727FF7006E18FD /* ThirdViewController.swift in Sources */,
 				2DC4DC1928727FD2006E18FD /* SecondeViewController.swift in Sources */,
 				2DC4DC0728727393006E18FD /* SceneDelegate.swift in Sources */,
+				2DA42AD42873192600F54CEE /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
