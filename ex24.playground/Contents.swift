@@ -19,7 +19,7 @@ func myFuncAssert(age: Int?) {
     assert(age! >= 0 && age! < 120, "age값이 정상범위를 벗어남")
     print("입력된 나이는 \(age!)입니다.")
 }
-myFuncAssert(age: 30)
+myFuncAssert(age: 123)
 //myFuncAssert(age: nil)
 //myFuncAssert(age: 150)
 
