@@ -33,3 +33,13 @@ myStruct2.age = 33
 print(myStruct.age)
 print(myStruct2.age)
 //힌트 : myStruct와 myStruct2는 서로 다른 메모리 공간에 할당됨.
+
+//클래스의 객체 생성 //하나의 공간 이어짐
+let myClass = MyClass()
+var myClass2 = myClass //myClass의 주소값(예 0x1000번지)이 정수로 전달됨.
+myClass2.age = 33
+print(myClass.age)
+print(myClass2.age)
+//힌트 : myClass와 myClass2는 주소값이 동일함. 같은 메모리공간을 가리키고 있음.
+
+
