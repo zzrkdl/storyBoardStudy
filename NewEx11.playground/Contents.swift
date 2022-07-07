@@ -120,3 +120,27 @@ let arrayStr2: [String] = myString6.components(separatedBy: ",")
 for str in arrayStr2 {
     print(str)
 }
+
+//문자열을 숫자로 바꿀때
+let myString7 = "123"
+let myInt : Int? = Int(myString7)
+//정수를 실수로 변환
+let myFloat: Float? = Float(myInt!)
+
+//래핑클래스
+//NSNumber : 모든 숫자 데이터형을 담을 수 있는 클래스(Int, Float, Double, Bool)
+var myInt2 : Int = 10
+let myIntNumber = NSNumber(value: myInt2)
+var tempFloat = myIntNumber.floatValue
+var tempInt = myIntNumber.intValue
+
+//NSValue : 모든 데이타형을 래핑하는 클래스(기본자료형, 클래스(객체), 구조체, 열거형)
+let rangeValue = NSRange(location: 0, length: 3)
+let rangeValueObject = NSValue(range: rangeValue)
+let tempRange = rangeValueObject.rangeValue
+
+//문자열의 범위를 지정할때, NSRange를 사용함
+var myNSString2 : NSString = NSString(string: "Swift Programming")
+let subStr = myNSString2.substring(with: tempRange)
+
+//Swift Any 데이터타입 : 모든 데이타 타입을 담을 수 있는 자료형
