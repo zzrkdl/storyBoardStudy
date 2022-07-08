@@ -82,3 +82,22 @@ func printMyName5(name1: String, name2:String ...){
     }
 }
 printMyName5(name1: "홍길동", name2: "변사또","춘향이","이몽룡")
+
+//복습
+
+//매개변수와 반환값 둘 다 있는 경우
+func funcEx1(a:Int , b:Int) -> Int {
+    var sum : Int
+    sum =  a + b
+    return sum
+}
+
+let result1 = funcEx1(a: 4 ,b: 5)
+print("\(result1)")
+
+func string_ex (name:String, age:Int, height:Double) -> String {
+    return "my name is \(name),age is \(age),height is  \(height)"
+}
+
+let sentence = string_ex(name: "song", age: 24, height: 183)
+print(sentence)
