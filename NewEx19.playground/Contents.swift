@@ -37,3 +37,53 @@ if let newObj = p.objContact {
     print("nil임")
 }
 dump(p)
+
+//옵셔널 바인딩 복습
+
+let x: Int? = 10
+let y: Int? = nil
+
+if let xx = x {
+    print("x = \(xx)")
+}
+else {
+    print("x is Optional")
+}
+if let yy =  y {
+    print("y = \(yy)")
+}
+
+//다중으로 옵셔널 바인딩
+//옵셔널 바인딩을 할때 여러개의 객체를 한번에 처리할 수 있음.
+let name1: String?
+let name2: String?
+
+name1 = "song"
+name2 = "kim"
+
+if let nameFirst = name1,
+   let nameLast = name2 {
+    print(nameFirst,nameLast)
+}
+
+//이른 탈출(guard let , guard else) 복습
+
+let a : Int? = 10
+let b : Int? = nil
+
+func opbinding() {
+    
+    guard let aa = a else {
+        return print("a is Optional")
+    }
+    print(aa)
+    guard let bb = b else {
+        return print("b is Optional")
+    }
+    print(bb)
+}
+opbinding()
+
+//옵셔널 바인딩 if let 과 guard let의 차이점
+// if let 은 if , else 일 경우 모두 처리가 가능하지만 할당한 상수를 if 안에서만 사용가능 (지역변수)
+// guard let 은 else 일 경우만 처리가 가능하지만 할당한 상수를 어디서든 사용가능 (전역변수)
