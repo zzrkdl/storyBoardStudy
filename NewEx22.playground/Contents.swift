@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 //익스텐션 Extension (확장).
 // 기능 : 기존에 있던 클래스, 구조체, 열거형, 기본자료형(Int,Float)에 기능을
@@ -40,3 +41,38 @@ extension Int {
 
 myInt.multiply(by: 2)
 10.multiply(by: 2)
+
+//protocol , extension 복습
+//프로토콜 안에는 프로퍼티를 만들 수 있음 get(읽기) , set(쓰기)
+protocol SomeProtocol {
+    var mustBeSettable : Int { get set} //읽기 쓰기전용
+    var doesNotNeedToBeSettable : Int { get } //읽기전용
+}
+
+protocol FullyNamed {
+    var fullName : String { get }
+}
+
+struct Person : FullyNamed {
+    var fullName: String
+}
+let john = Person(fullName: "홍길동")
+print(john.fullName)
+
+protocol RandomNumberGenerator {
+    func random() -> Double
+}
+
+class LinearCongruentialGenerator: RandomNumberGenerator {
+    var lastRandom : Double = 42.0
+    let m : Double = 139968.0
+    let a : Double = 3877.0
+    let c : Double = 29573.0
+    func random() -> Double {
+        lastRandom = ((lastRandom * a + c)
+            .truncatingRemainder(dividingBy: m))
+        return lastRandom / m
+        
+    }
+}
+
