@@ -13,11 +13,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Outlet 들어가는 곳
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
     }
 
-
+    //Action 함수 들어가는 곳
+    
+    //네비게이션 컨트롤러에서 코드로 이동하기
+    @IBAction func onBtnNext(_ sender: UIButton) {
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondeViewController
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
 }
 

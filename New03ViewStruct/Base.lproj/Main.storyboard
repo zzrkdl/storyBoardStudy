@@ -30,6 +30,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Code로 이동하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxq-Mm-uYW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNs-xD-1At">
                                 <rect key="frame" x="92" y="207" width="207" height="44"/>
@@ -38,6 +41,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Segue로 이동하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Odk-to-ln1" kind="show" id="Voj-BS-4u6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="949.23076923076917" y="83.886255924170612"/>
         </scene>
-        <!--View Controller-->
+        <!--Seconde View Controller-->
         <scene sceneID="jq4-r5-QuZ">
             <objects>
-                <viewController id="Odk-to-ln1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Odk-to-ln1" customClass="SecondeViewController" customModule="New03ViewStruct" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w57-aJ-RHH">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +77,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Segue로 이동하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="94X-Kw-L4d" kind="show" id="TFA-CQ-s0e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjV-WL-BBE">
                                 <rect key="frame" x="97" y="271" width="196" height="44"/>
@@ -79,20 +88,35 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Code로 이동하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnNext:" destination="Odk-to-ln1" eventType="touchUpInside" id="sFi-EV-QPq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6m-e7-Ogk">
+                                <rect key="frame" x="115" y="385" width="160" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="뒤로 이동하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnBack:" destination="Odk-to-ln1" eventType="touchUpInside" id="dWF-P5-gDX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w6T-YH-0bq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WdX-d1-JuF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e35-3H-AIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1650.7692307692307" y="83.886255924170612"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="Oh6-dc-gix">
             <objects>
-                <viewController id="94X-Kw-L4d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="94X-Kw-L4d" customClass="ThirdViewController" customModule="New03ViewStruct" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDs-mO-Nwb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,26 +128,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7F-RE-NUj">
-                                <rect key="frame" x="92" y="201" width="207" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Segue로 이동하기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huh-w0-7o6">
-                                <rect key="frame" x="97" y="267" width="196" height="44"/>
+                                <rect key="frame" x="115" y="267" width="160" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Code로 이동하기">
+                                <buttonConfiguration key="configuration" style="plain" title="뒤로 이동하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnBack:" destination="94X-Kw-L4d" eventType="touchUpInside" id="DUa-qy-fE7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ye-ye-BhW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eis-G3-eN0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h17-md-utl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
