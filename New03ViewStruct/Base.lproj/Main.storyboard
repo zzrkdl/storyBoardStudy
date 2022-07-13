@@ -42,7 +42,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Odk-to-ln1" kind="show" id="Voj-BS-4u6"/>
+                                    <segue destination="Odk-to-ln1" kind="show" identifier="toSecondVC" id="Voj-BS-4u6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olm-Ff-Epg">

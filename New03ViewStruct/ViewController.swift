@@ -32,19 +32,32 @@
 //viewWillLayoutSubviews : 컨트롤(서브뷰)들의 레이아웃을 잡기 전에 호출됨.
 //viewDidLayoutSubviews : 컨트롤들의 레이아웃을 잡고 나서 호출됨.
 
+//뷰 컨트롤러 간의 데이타 전달(참조)하는 법
+//1. 전역변수를 이용한다. (앱내 모든 VC에서 접근 가능)
+//2. A클래스(VC)에서 B클래스로 데이타 전달
+//3. B클래스에서 A클래스로 데이타 전달
+
 import UIKit
 
 class ViewController: UIViewController {
-
+    //전역변수를 참조하는 방법
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var mainData : String = ""
     //Outlet 들어가는 곳
     
     override func viewDidLoad() {
         super.viewDidLoad()
        print("viewDidLoad")
+        
+        appDelegate.mainVC = self
+        
+        //전역변수를 참조하는 곳
+        appDelegate.globalData = "전역변수 설정함."
     }
 
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
+        print(self.mainData)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,11 +81,21 @@ class ViewController: UIViewController {
     }
     //Action 함수 들어가는 곳
     
+    //네비게이션 컨트롤러에서 Segue로 이동하기
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondVC" {
+            let vc = segue.destination as! SecondeViewController
+            vc.secondData = "메인화면에서 전달한 데이타(Segue)"
+        }
+    }
+    
     //네비게이션 컨트롤러에서 코드로 이동하기
     @IBAction func onBtnNext(_ sender: UIButton) {
         let newVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondeViewController
+        newVC.secondData = "메인화면에서 전달한 데이타"
         self.navigationController?.pushViewController(newVC, animated: true)
     }
+    
     @IBAction func onBtnPopup(_ sender: UIButton) {
         let newVC =
         self.storyboard?
