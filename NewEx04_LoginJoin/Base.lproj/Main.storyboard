@@ -192,6 +192,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnJoin:" destination="VSS-Op-Jtz" eventType="touchUpInside" id="eNh-FR-IRi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc3-tK-KrS">
                                 <rect key="frame" x="105" y="617" width="180" height="50"/>
@@ -209,6 +212,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z10-kf-y97"/>
+                    <connections>
+                        <outlet property="tfID" destination="gZh-fC-Lgn" id="8fS-4o-btt"/>
+                        <outlet property="tfName" destination="kAY-uu-Hxb" id="Ugn-zj-jgP"/>
+                        <outlet property="tfPW" destination="1v0-Yj-4XD" id="Dse-S9-LTZ"/>
+                        <outlet property="tfPhone" destination="1v0-Yj-4XD" id="0Gh-DW-h7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnl-AP-vFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +253,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="완료">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnDone:" destination="6Ar-id-joj" eventType="touchUpInside" id="zkp-Ko-9Xv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약관동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-5w-zYk">
                                 <rect key="frame" x="93" y="615" width="70" height="24"/>
@@ -255,6 +267,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ucE-Xx-xhn">
                                 <rect key="frame" x="247" y="612" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onSwitchChanged:" destination="6Ar-id-joj" eventType="valueChanged" id="UWG-S3-cDH"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IlN-BJ-age"/>
