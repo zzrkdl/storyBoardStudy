@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e5l-3S-AH4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SSF-T2-PnO">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -152,6 +152,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0W-ps-8Mp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="760" y="101.65876777251184"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uys-uW-xQv">
+            <objects>
+                <viewController id="SSF-T2-PnO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBb-wc-XEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFO-r6-Hfw">
+                                <rect key="frame" x="20" y="20" width="374" height="187"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NFO-r6-Hfw" secondAttribute="height" multiplier="2:1" id="SCg-yp-5Vc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ops-TT-wji">
+                                <rect key="frame" x="57.333333333333343" y="232" width="299.33333333333326" height="187"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEH-rA-pWl">
+                                <rect key="frame" x="87.000000000000014" y="516" width="240" height="120"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0V3-WZ-Lnf"/>
+                                    <constraint firstAttribute="width" constant="240" id="T1P-RW-wsS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tdL-3j-2g0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JEH-rA-pWl" firstAttribute="centerX" secondItem="tdL-3j-2g0" secondAttribute="centerX" id="1SQ-TK-NFJ"/>
+                            <constraint firstItem="NFO-r6-Hfw" firstAttribute="top" secondItem="tdL-3j-2g0" secondAttribute="top" constant="20" id="3d1-bl-NZR"/>
+                            <constraint firstItem="NFO-r6-Hfw" firstAttribute="leading" secondItem="tdL-3j-2g0" secondAttribute="leading" constant="20" id="Bop-pV-yYF"/>
+                            <constraint firstItem="ops-TT-wji" firstAttribute="height" secondItem="NFO-r6-Hfw" secondAttribute="height" id="IvN-wu-eKG"/>
+                            <constraint firstItem="ops-TT-wji" firstAttribute="top" secondItem="NFO-r6-Hfw" secondAttribute="bottom" constant="25" id="NX7-CU-3dA"/>
+                            <constraint firstItem="tdL-3j-2g0" firstAttribute="bottom" secondItem="JEH-rA-pWl" secondAttribute="bottom" constant="100" id="OtU-VO-kZx"/>
+                            <constraint firstItem="ops-TT-wji" firstAttribute="width" secondItem="NFO-r6-Hfw" secondAttribute="width" multiplier="0.8" id="aa3-c9-Q6U"/>
+                            <constraint firstItem="ops-TT-wji" firstAttribute="centerX" secondItem="jBb-wc-XEQ" secondAttribute="centerX" id="v8J-Vq-Hwd"/>
+                            <constraint firstItem="tdL-3j-2g0" firstAttribute="trailing" secondItem="NFO-r6-Hfw" secondAttribute="trailing" constant="20" id="yIO-x0-FHm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m41-Gb-RV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="101"/>
         </scene>
     </scenes>
     <resources>
