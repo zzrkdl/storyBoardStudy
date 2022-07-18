@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.13.1):
+    - SDWebImage/Core (= 5.13.1)
+  - SDWebImage/Core (5.13.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - SDWebImage (~> 5.0)
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  SDWebImage: fb26a455eeda4c7a55e4dcb6172dbb258af7a4ca
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 74093b52a4425460700830776b2c3e816508192e
+
+COCOAPODS: 1.11.3
