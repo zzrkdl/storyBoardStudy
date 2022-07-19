@@ -58,6 +58,9 @@
                             <constraint firstItem="fBJ-WI-obN" firstAttribute="bottom" secondItem="gdO-ON-hfO" secondAttribute="bottom" constant="-20" id="hRv-XH-1wb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="fBJ-WI-obN" id="zqi-xb-utK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +84,7 @@
         <scene sceneID="ImQ-ux-0W1">
             <objects>
                 <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZTe-d0-vrB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UcU-YZ-C5k">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="UcU-YZ-C5k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="uEv-Ka-W4h"/>
@@ -96,7 +99,7 @@
         <scene sceneID="e0d-sd-KSd">
             <objects>
                 <viewController storyboardIdentifier="thirdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68H-eZ-IFS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mOT-4h-dgI">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="mOT-4h-dgI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="SLT-rY-RXJ"/>

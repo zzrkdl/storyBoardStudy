@@ -57,6 +57,16 @@ class MyPageViewController: UIPageViewController, UIPageViewControllerDelegate, 
         }
         return viewControllerList[afterIndex]
     }
-
-
+    //코드로 초기화시 기본설정을 할 수 있음.
+    required init?(coder: NSCoder) {
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    }
+    
+    //page이동시 끝났을때 호출.
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let currentTag = pageViewController.viewControllers!.first!.view.tag
+        print(currentTag)
+        
+        appDelegate.mainVC?.pageControl.currentPage = currentTag
+    }
 }
