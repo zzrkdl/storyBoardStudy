@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B22F79FF-D5D8-4A5A-902B-577CE98355C5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "New14AudioPlayer/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - 981c50259be50be8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.progressView.getter : Swift.Optional&lt;__C.UIProgressView&gt;"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - 8cdfb276604303dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.progressView.setter : Swift.Optional&lt;__C.UIProgressView&gt;"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - e1d8cea3289fded"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.progressView.modify : Swift.Optional&lt;__C.UIProgressView&gt;"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - 56cbf4a2f13ae793"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.progressView.modify : Swift.Optional&lt;__C.UIProgressView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - ec633d1a16f56958"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; New14AudioPlayer.ViewController"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  uuid = "BDC7EB50-D8DB-4AD8-882D-716E17BABB8E - 7680c6e5571bf147"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "New14AudioPlayer.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;New14AudioPlayer.ViewController&gt;"
+                  moduleName = "New14AudioPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gimseongjin/Documents/iOSProjects/New14AudioPlayer/New14AudioPlayer/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "174">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
