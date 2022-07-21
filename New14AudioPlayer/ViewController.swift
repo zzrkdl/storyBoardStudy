@@ -19,7 +19,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer : AVAudioPlayer!
     var audioFile : URL!
-    var time: Timer?
+    var timer: Timer?
     
     
     override func viewDidLoad() {
@@ -51,20 +51,68 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         let min = Int(audioPlayer.duration / 60)
         let sec = Int(audioPlayer.duration) % 60
         labelEndTime.text = "\(min):\(sec)"  //총재생시간
+        
+        //UI 초기화
+        sliderVolume.maximumValue = 10.0
+        sliderVolume.value = 1.0
+       
+        progressView.progress = 0 //노래 재생시간
+        btnPlay.isEnabled = true    //비활성화
+        btnPause.isEnabled = false  //활성화
+        btnStop.isEnabled = false   //활성화
+        
+        sliderSeek.maximumValue = Float(audioPlayer.duration)
+        sliderSeek.value = 0
+        
+        //타이머 //selector: 실행될때마다 반복되는 함수
+        timer  = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(callbackTimer), userInfo: nil, repeats: true)
     }
     
+    //타이머 콜백함수
+    @objc func callbackTimer(){
+        let min = Int(audioPlayer.currentTime / 60)
+        let sec = Int(audioPlayer.currentTime ) % 60
+        labelCurrentTime.text = "\(min):\(sec)" //현재재생시간
+        
+        progressView.progress = Float(audioPlayer.currentTime / audioPlayer.duration)
+    }
     
+    //재생 시작
     @IBAction func onBtnPlay(_ sender: UIButton) {
         audioPlayer.play()
+        btnPlay.isEnabled = false
+        btnPause.isEnabled = true
+        btnStop.isEnabled = true
     }
+    
+    //재생 잠시멈춤
     @IBAction func onBtnPause(_ sender: UIButton) {
         audioPlayer.pause()
+        btnPlay.isEnabled = true
+        btnPause.isEnabled = false
+        btnStop.isEnabled = false
     }
+    
+    //재생멈춤
     @IBAction func onBtnStop(_ sender: UIButton) {
         audioPlayer.stop()
         //기본적으로 stop를 지원하지 않음
         audioPlayer = nil
-        initPlayer() 
+        initPlayer() // 음악 플레이어를 초기화해서 다시 실행시킴
+    }
+ 
+    //재생시간 변경
+    @IBAction func onSliderSeek(_ sender: UISlider) {
+        audioPlayer.pause()
+        audioPlayer.currentTime = Double(sender.value)
+        
+        progressView.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
+        audioPlayer.play()
+    }
+    
+    //볼륨변경
+    @IBAction func onSliderVolume(_ sender: UISlider) {
+        audioPlayer.volume = sliderVolume.value
     }
 }
 
