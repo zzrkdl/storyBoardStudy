@@ -25,9 +25,29 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        selectAudioFile()
-        initPlayer()
+        
+        //번들안의 mp3,ogg,wav 재생가능
+        //selectAudioFile()
+        //initPlayer()
+        
+        //온라인스트리밍
+        //HTTP서버 상의 오디오 파일 재생 시
+        let urlstring = "http://nissisoft21.dothome.co.kr/music.mp3"
+        let url = URL(string: urlstring)
+        downloadFileFromURL(url: url!)
     }
+        
+    
+    func downloadFileFromURL( url : URL ) {
+        var downloadTask : URLSessionDownloadTask
+        downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { [weak self]( URL, responds, error) -> Void in
+            //다운로드를 마쳤을 때
+            self?.audioFile = URL! as URL
+            self?.initPlayer()
+        })
+        downloadTask.resume()
+    }
+   
 
     //번들 클래스 안에 main에서 url을 가저옴 forResource 이름 extension 확장자
     func selectAudioFile() {
@@ -46,26 +66,28 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.prepareToPlay() //메모리에 음원을 넣어줌. 버퍼링
         audioPlayer.volume = 1.0
         
-
-        labelCurrentTime.text = "00:00"  //현재재생시간
-        let min = Int(audioPlayer.duration / 60)
-        let sec = Int(audioPlayer.duration) % 60
-        labelEndTime.text = "\(min):\(sec)"  //총재생시간
+        DispatchQueue.main.sync{
+            labelCurrentTime.text = "00:00"  //현재재생시간
+            let min = Int(audioPlayer.duration / 60)
+            let sec = Int(audioPlayer.duration) % 60
+            labelEndTime.text = "\(min):\(sec)"  //총재생시간
+            
+            //UI 초기화
+            sliderVolume.maximumValue = 1.0
+            sliderVolume.value = 1.0
+           
+            progressView.progress = 0 //노래 재생시간
+            btnPlay.isEnabled = true    //비활성화
+            btnPause.isEnabled = false  //활성화
+            btnStop.isEnabled = false   //활성화
+            
+            sliderSeek.maximumValue = Float(audioPlayer.duration)
+            sliderSeek.value = 0
+            
+            //타이머 //selector: 실행될때마다 반복되는 함수
+            timer  = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(callbackTimer), userInfo: nil, repeats: true)
         
-        //UI 초기화
-        sliderVolume.maximumValue = 10.0
-        sliderVolume.value = 1.0
-       
-        progressView.progress = 0 //노래 재생시간
-        btnPlay.isEnabled = true    //비활성화
-        btnPause.isEnabled = false  //활성화
-        btnStop.isEnabled = false   //활성화
-        
-        sliderSeek.maximumValue = Float(audioPlayer.duration)
-        sliderSeek.value = 0
-        
-        //타이머 //selector: 실행될때마다 반복되는 함수
-        timer  = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(callbackTimer), userInfo: nil, repeats: true)
+        }
     }
     
     //타이머 콜백함수
@@ -98,7 +120,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.stop()
         //기본적으로 stop를 지원하지 않음
         audioPlayer = nil
-        initPlayer() // 음악 플레이어를 초기화해서 다시 실행시킴
+        //initPlayer() // 음악 플레이어를 초기화해서 다시 실행시킴
+        
+        let urlstring = "http://nissisoft21.dothome.co.kr/music.mp3"
+        let url = URL(string: urlstring)
+        downloadFileFromURL(url: url!)
     }
  
     //재생시간 변경
