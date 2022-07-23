@@ -24,32 +24,32 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onBtnPlayerInner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wg-pm-UdU"/>
+                                    <action selector="onBtnPlayerInner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FeQ-Wp-E8T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMf-Kr-2PD">
-                                <rect key="frame" x="114" y="199" width="162" height="40"/>
+                                <rect key="frame" x="114" y="192" width="162" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="외부 동영상 재생">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onBtnPlayLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Orb-tX-XDb"/>
+                                    <action selector="onBtnPlayLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vn9-aL-YJ4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-IM-I3N">
-                                <rect key="frame" x="105" y="269" width="180" height="40"/>
+                                <rect key="frame" x="105" y="267" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="유튜브 동영상 재생">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onBtnPlayYoutube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HlC-KY-WCK"/>
+                                    <action selector="onBtnPlayYoutube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mbp-mG-oqB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkv-8j-ELt">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkv-8j-ELt" customClass="YTPlayerView">
                                 <rect key="frame" x="16" y="369" width="358" height="324"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -58,10 +58,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="youtubePlayer" destination="Zkv-8j-ELt" id="DCz-co-Z7Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.307692307692307" y="115.87677725118483"/>
+            <point key="canvasLocation" x="80" y="119"/>
         </scene>
     </scenes>
     <resources>

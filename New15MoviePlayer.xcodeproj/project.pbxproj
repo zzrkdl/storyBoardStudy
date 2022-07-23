@@ -13,7 +13,8 @@
 		2D049716288AE3A700D3B233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D049714288AE3A700D3B233 /* Main.storyboard */; };
 		2D049718288AE3A800D3B233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D049717288AE3A800D3B233 /* Assets.xcassets */; };
 		2D04971B288AE3A800D3B233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D049719288AE3A800D3B233 /* LaunchScreen.storyboard */; };
-		2D049723288AE66A00D3B233 /* Video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2D049722288AE66A00D3B233 /* Video1.mp4 */; };
+		2DA2C1DC288C267A0027328D /* Video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2DA2C1DB288C267A0027328D /* Video1.mp4 */; };
+		42BC1FB96EF5D4339EC6EB8D /* Pods_New15MoviePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7542FAAEBD46BB4BD7EE184 /* Pods_New15MoviePlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,10 @@
 		2D049717288AE3A800D3B233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D04971A288AE3A800D3B233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D04971C288AE3A800D3B233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D049722288AE66A00D3B233 /* Video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video1.mp4; sourceTree = "<group>"; };
+		2DA2C1DB288C267A0027328D /* Video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Video1.mp4; path = ../../../../Desktop/Video1.mp4; sourceTree = "<group>"; };
+		42495C274AA98B6B5CB5FA79 /* Pods-New15MoviePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-New15MoviePlayer.release.xcconfig"; path = "Target Support Files/Pods-New15MoviePlayer/Pods-New15MoviePlayer.release.xcconfig"; sourceTree = "<group>"; };
+		8A8311232B24AA07998C7A4E /* Pods-New15MoviePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-New15MoviePlayer.debug.xcconfig"; path = "Target Support Files/Pods-New15MoviePlayer/Pods-New15MoviePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		F7542FAAEBD46BB4BD7EE184 /* Pods_New15MoviePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_New15MoviePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42BC1FB96EF5D4339EC6EB8D /* Pods_New15MoviePlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2D04970D288AE3A700D3B233 /* New15MoviePlayer */,
 				2D04970C288AE3A700D3B233 /* Products */,
+				B81460BE15E343056C98566D /* Pods */,
+				4800A5DC5560198F2083B820 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +65,33 @@
 		2D04970D288AE3A700D3B233 /* New15MoviePlayer */ = {
 			isa = PBXGroup;
 			children = (
-				2D049722288AE66A00D3B233 /* Video1.mp4 */,
+				2DA2C1DB288C267A0027328D /* Video1.mp4 */,
 				2D04970E288AE3A700D3B233 /* AppDelegate.swift */,
 				2D049710288AE3A700D3B233 /* SceneDelegate.swift */,
 				2D049712288AE3A700D3B233 /* ViewController.swift */,
 				2D049714288AE3A700D3B233 /* Main.storyboard */,
 				2D049717288AE3A800D3B233 /* Assets.xcassets */,
-				2D049719288AE3A800D3B233 /* LaunchScreen.storyboard */,
 				2D04971C288AE3A800D3B233 /* Info.plist */,
+				2D049719288AE3A800D3B233 /* LaunchScreen.storyboard */,
 			);
 			path = New15MoviePlayer;
+			sourceTree = "<group>";
+		};
+		4800A5DC5560198F2083B820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7542FAAEBD46BB4BD7EE184 /* Pods_New15MoviePlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B81460BE15E343056C98566D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A8311232B24AA07998C7A4E /* Pods-New15MoviePlayer.debug.xcconfig */,
+				42495C274AA98B6B5CB5FA79 /* Pods-New15MoviePlayer.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D04971F288AE3A800D3B233 /* Build configuration list for PBXNativeTarget "New15MoviePlayer" */;
 			buildPhases = (
+				D82E5084AEE651754761096A /* [CP] Check Pods Manifest.lock */,
 				2D049707288AE3A700D3B233 /* Sources */,
 				2D049708288AE3A700D3B233 /* Frameworks */,
 				2D049709288AE3A700D3B233 /* Resources */,
+				6CEB924A04EC7D749283814F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,13 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D04971B288AE3A800D3B233 /* LaunchScreen.storyboard in Resources */,
-				2D049723288AE66A00D3B233 /* Video1.mp4 in Resources */,
+				2DA2C1DC288C267A0027328D /* Video1.mp4 in Resources */,
 				2D049718288AE3A800D3B233 /* Assets.xcassets in Resources */,
 				2D049716288AE3A700D3B233 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CEB924A04EC7D749283814F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-New15MoviePlayer/Pods-New15MoviePlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-New15MoviePlayer/Pods-New15MoviePlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-New15MoviePlayer/Pods-New15MoviePlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82E5084AEE651754761096A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-New15MoviePlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D049707288AE3A700D3B233 /* Sources */ = {
@@ -286,6 +354,7 @@
 		};
 		2D049720288AE3A800D3B233 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A8311232B24AA07998C7A4E /* Pods-New15MoviePlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +382,7 @@
 		};
 		2D049721288AE3A800D3B233 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42495C274AA98B6B5CB5FA79 /* Pods-New15MoviePlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
