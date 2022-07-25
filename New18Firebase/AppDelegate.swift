@@ -1,9 +1,6 @@
 //
 //  AppDelegate.swift
-//  New18Firebase
-//
-//  Created by 김성진 on 2022/07/24.
-//
+
 
 import UIKit
 import FirebaseCore
@@ -14,6 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window : UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //앱 구동시 맨처음 호출되는 함수
+        //파이어베이스 초기화
         FirebaseApp.configure()
         return true
     }
