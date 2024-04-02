@@ -1,0 +1,6 @@
+framework module Pods_New17GoogleMap {
+  umbrella header "Pods-New17GoogleMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
